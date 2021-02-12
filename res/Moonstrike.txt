@@ -1,0 +1,101 @@
+MOON STRIKE
+===========
+
+Professor Humphrey Bogus, inventor of the Digital Teabog and leader 
+of the Lunar Renovation Project has done the dirty and parked his 
+rather unpleasant Tachyon Vortex super-weapon on the nearside of 
+the Moon. Your mission, naturally, is to breach the mad Professor's 
+defences and destroy the Vortex.*
+
+As you zoom through the futuristic moonscape, watch out for man-eating 
+pizzas, serried ranks of false teeth, demented ducks-and the Mona Lisa!
+
+But before all this, sit back and marvel at the unique MovieLoad system 
+as it unfolds the story behind Moon Strike before your very eyes.
+
+*All this stuff about saving the world is pure trivia. Your real mission 
+is to beat up bogus for all the terrible things he said about your 
+Grandmother.
+
+
+This program is for all cassette-based Spectrum microcomputers. Side A 
+is the 48K version featuring MovieLoad, and Side B is the 128K / Plus 2 
+version with added sound and fast loading. Stunning though MovieLoad is, 
+we didn't think you'd want to see it every time you play the game!
+
+Loading
+
+Side A: Select 48K mode if using 128K or Plus 2 
+	LOAD "" and press ENTER 
+	Press PLAY on the tape player
+
+Now sit back and marvel at the unique MovieLoad system as it unfolds 
+the story behind Moon Strike before your very eyes.
+
+Side B: Select Tape Loader 
+	Press ENTER
+	Press PLAY on the tape player 
+
+
+The game
+
+It's the year 2078, and the Earth is still not quite old enough to look 
+after itself.
+
+Professor Humphrey Bogus, inventor of the Digital Teabag and leader of 
+the Lunar Renovation Project, has done the dirty and parked his rather 
+unpleasant Tachyon Vortex super-weapon on the near side of the Moon. 
+Like any self-respecting mad scientist, he intends to blow up the world 
+with it. Your mission, naturally, is to breach the mad Professor's 
+defences and destroy the Vortex.
+
+
+Controls
+
+Moon Strike is compatible with Kempston, Interface 2, Sinclair, AGF and 
+Cursor joysticks and can also be played with the keyboard.
+
+Joystick
+Normal left, right, up, down, and fire controls apply.
+
+Keyboard
+
+O to go left 
+P to go right 
+Q to go up 
+A to go down 
+SPACE to fire
+CAPS SHIFT to pause/unpause
+Other keys may have unpredictable effects!
+
+To bomb potential assailants (see below), take aim with the cross-hairs, 
+move the joystick down and press FIRE.
+
+
+Warning
+
+Everything you encounter can be dangerous to you. In particular, you 
+should watch out for:
+
+Lachrymose lightbulbs		Monochromatic Mona Lisas
+Benificent bombs		Allotheistic aliens
+Enigmatic emplacements		Dehiscent ducks
+Coumaric coin-slots		Fructiferous factories
+Spifflicating 6502 chips	Tropospheric televisions
+Curvilinear currency		Popliteal pizzas
+... and an awful lot of dentures - in that order.
+
+
+Playing tips
+
+Disengage frontal lobes and attempttotal synthesis with your Spectrum. 
+(In other words, watch out for the forts at the end of each level).
+
+
+
+©1987 Mirrorsoft Ltd. The computer program contained in Moon Strike and 
+its associated documentation and materials are protected by National and 
+International Copyright Law. Storage in a retrieval system, reproduction, 
+translation, copying, hiring, lending, broadcasting and public performance 
+are prohibited without the express written permission of Mirrorsoft Ltd. 
+All rights of author and owner are reserved worldwide.

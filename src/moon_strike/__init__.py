@@ -1,5 +1,6 @@
 import pygame
 from game_utils.game import Game
+from .resource import Resource
 from .sprites.background import Background
 from .sprites.spaceship import Spaceship
 from .sprites.main_field import MainField
@@ -9,6 +10,7 @@ class MoonStrike(Game):
     def __init__(self, size=(800, 600), title="Game"):
         super().__init__(size=size, title=title)
 
+        self.resource = None
         self.background = Background()
         self.main_field = MainField()
 
@@ -17,8 +19,9 @@ class MoonStrike(Game):
         self.load()
 
     def load(self):
-        self.background.load()
-        self.main_field.load()
+        self.resource = Resource()
+        self.background.load(self.resource)
+        self.main_field.load(self.resource)
 
     def process_event(self, event):
         if event.type == pygame.KEYDOWN:

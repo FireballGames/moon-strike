@@ -2,11 +2,13 @@ import os
 import pygame
 import config
 from game_utils.image_sprite import ImageSprite
+from .land import Land
 from .spaceship import Spaceship
 
 
 class Border(ImageSprite):
-    IMAGE_PATH = os.path.join(config.PATH, 'main_field.png')
+    def get_image(self, resource):
+        return resource.main_field
 
 
 class MainField(pygame.sprite.Sprite):
@@ -23,9 +25,9 @@ class MainField(pygame.sprite.Sprite):
     )
     SCOPE = pygame.Rect(
         config.FIELD_OFFSET_X,
-        config.FIELD_OFFSET_Y,
+        config.FIELD_OFFSET_Y + 6 * 8,
         config.FIELD_WIDTH,
-        config.FIELD_HEIGHT,
+        config.FIELD_HEIGHT - 8 * (6 + 1),
     )
 
     def __init__(self, *groups):
@@ -36,12 +38,16 @@ class MainField(pygame.sprite.Sprite):
 
         self.group = pygame.sprite.Group()
 
+        self.land = Land(self.group)
         self.spaceship = Spaceship((config.PLAYER_LEFT, config.PLAYER_TOP), self.group)
         self.border = Border(self.group)
 
-    def load(self):
-        self.border.load()
-        self.spaceship.load()
+        print(self.OUTER)
+
+    def load(self, resource):
+        self.land.load(resource)
+        self.border.load(resource)
+        self.spaceship.load(resource)
 
     def check_rect(self, new_rect, bounce):
         if new_rect.left <= self.SCOPE.left:
@@ -61,6 +67,7 @@ class MainField(pygame.sprite.Sprite):
             self.spaceship.get_new_rect(),
             self.spaceship.bounce,
         )
+
         self.group.update(*args, **kwargs)
 
     def draw(self, surface):

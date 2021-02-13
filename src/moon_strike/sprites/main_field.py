@@ -1,4 +1,3 @@
-import os
 import pygame
 import config
 from game_utils.image_sprite import ImageSprite
@@ -42,14 +41,20 @@ class MainField(pygame.sprite.Sprite):
         self.spaceship = Spaceship((config.PLAYER_LEFT, config.PLAYER_TOP), self.group)
         self.border = Border(self.group)
 
-        print(self.OUTER)
-
     def load(self, resource):
         self.land.load(resource)
+        print('Main', self.rect)
+        self.land.rect.bottom = self.rect.bottom
+
         self.border.load(resource)
         self.spaceship.load(resource)
 
-    def check_rect(self, new_rect, bounce):
+    def check_land_rect(self, new_rect):
+        if new_rect.top > config.FIELD_OFFSET_Y:
+            new_rect.top = config.FIELD_OFFSET_Y
+        return new_rect
+
+    def check_spaceship_rect(self, new_rect, bounce):
         if new_rect.left <= self.SCOPE.left:
             new_rect.left = self.SCOPE.left + bounce
         if new_rect.right >= self.SCOPE.right:
@@ -63,9 +68,12 @@ class MainField(pygame.sprite.Sprite):
     def update(self, *args, **kwargs):
         super().update(*args, **kwargs)
 
-        self.spaceship.rect = self.check_rect(
+        self.spaceship.rect = self.check_spaceship_rect(
             self.spaceship.get_new_rect(),
             self.spaceship.bounce,
+        )
+        self.land.rect = self.check_land_rect(
+            self.land.rect.move(0, self.spaceship.speed),
         )
 
         self.group.update(*args, **kwargs)

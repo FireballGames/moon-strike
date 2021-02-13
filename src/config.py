@@ -1,9 +1,11 @@
 # import os
 
 __BLOCK = 8
+
 WIDTH = 32 * __BLOCK
 HEIGHT = 24 * __BLOCK
 TITLE = "Moon Strike"
+FPS = 30
 
 BACKGROUND_COLOR = (0, 0, 0)
 PATH = 'res'  # os.path.join('res')

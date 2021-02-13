@@ -1,5 +1,3 @@
-import os
-import config
 from game_utils.image_sprite import ImageSprite
 
 
@@ -9,6 +7,7 @@ class Spaceship(ImageSprite):
         self.bounce = 0
         self.moving_x = 0
         self.moving_y = 0
+        self.speed = 1
         self.pos = pos
 
     def get_image(self, resource):

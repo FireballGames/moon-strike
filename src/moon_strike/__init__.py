@@ -7,8 +7,8 @@ from .sprites.main_field import MainField
 
 
 class MoonStrike(Game):
-    def __init__(self, size=(800, 600), title="Game"):
-        super().__init__(size=size, title=title)
+    def __init__(self, size=(800, 600), title="Game", fps=60):
+        super().__init__(size=size, title=title, fps=fps)
 
         self.resource = None
         self.background = Background()

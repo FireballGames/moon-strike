@@ -6,6 +6,7 @@ def main():
     __game = MoonStrike(
         size=(config.WIDTH, config.HEIGHT),
         title=config.TITLE,
+        fps=config.FPS,
     )
     __game()
 

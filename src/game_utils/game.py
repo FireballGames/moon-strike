@@ -3,7 +3,7 @@ import sys
 
 
 class Game:
-    def __init__(self, size=(800, 600), title="Game"):
+    def __init__(self, size=(800, 600), title="Game", fps=60):
         pygame.init()
 
         self.window = pygame.display.set_mode(size)
@@ -11,6 +11,7 @@ class Game:
 
         self.clock = pygame.time.Clock()
         self.playing = True
+        self.fps = fps
 
     def quit(self):
         self.playing = False
@@ -34,3 +35,4 @@ class Game:
                 self.process_event(event)
             self.update()
             self.draw()
+            self.clock.tick(self.fps)

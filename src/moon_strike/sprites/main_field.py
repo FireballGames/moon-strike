@@ -43,15 +43,14 @@ class MainField(pygame.sprite.Sprite):
 
     def load(self, resource):
         self.land.load(resource)
-        print('Main', self.rect)
         self.land.rect.bottom = self.rect.bottom
 
         self.border.load(resource)
         self.spaceship.load(resource)
 
     def check_land_rect(self, new_rect):
-        if new_rect.top > config.FIELD_OFFSET_Y:
-            new_rect.top = config.FIELD_OFFSET_Y
+        # if new_rect.top > config.FIELD_OFFSET_Y:
+        #     new_rect.top = config.FIELD_OFFSET_Y
         return new_rect
 
     def check_spaceship_rect(self, new_rect, bounce):

@@ -1,6 +1,4 @@
-import os
 import pygame
-import config
 
 
 class ImageSprite(pygame.sprite.Sprite):

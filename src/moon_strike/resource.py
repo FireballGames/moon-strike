@@ -4,6 +4,10 @@ import config
 
 
 class Resource:
+    PATH = config.PATH
+    RES_FILES = {
+        'game-objects': 'game-objects.png',
+    }
     FILES = {
         'main_field': os.path.join(config.PATH, 'main_field.png'),
         'moon_strike': os.path.join(config.PATH, 'MoonStrike.png'),
@@ -23,3 +27,12 @@ class Resource:
         self.spaceship = pygame.image.load(self.FILES['spaceship'])
         self.sprites = pygame.image.load(self.FILES['sprites'])
         self.start = pygame.image.load(self.FILES['start'])
+
+        self.res_images = self.__load_resources()
+
+    @classmethod
+    def __load_resources(cls):
+        return {
+            k: pygame.image.load(os.path.join(cls.PATH, v))
+            for k, v in cls.RES_FILES.items()
+        }
